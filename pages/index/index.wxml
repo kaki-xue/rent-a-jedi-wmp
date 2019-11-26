@@ -1,14 +1,53 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class="banner" style="height: 30vh; background-image:url(https://images.unsplash.com/photo-1484824823018-c36f00489002?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+  <view class="margin-top">Welcome to rent a Jedi</view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="card-container"> 
+    <view class="card">
+      <image class="avatar" scr="" ></image>
+      <view class="text">
+        <view>Name</view>
+        <view>Decription</view>
+      </view>
+      <view class="price-grey">10,000rmb</view>
+    </view>
+     <view class="card">
+      <image class="avatar" scr="" ></image>
+      <view class="text">
+        <view>Name</view>
+        <view>Decription</view>
+      </view>
+      <view class="price-grey">10,000rmb</view>
+    </view>
+     <view class="card">
+      <image class="avatar" scr="" ></image>
+      <view class="text">
+        <view>Name</view>
+        <view>Decription</view>
+      </view>
+      <view class="price-grey">10,000rmb</view>  
+    </view>
+    <view class="card">
+      <image class="avatar" scr="" ></image>
+      <view class="text">
+        <view>Name</view>
+        <view>Decription</view>
+      </view>
+      <view class="price-grey">10,000rmb</view>  
+    </view>
+     <view class="card">
+      <image class="avatar" scr="" ></image>
+      <view class="text">
+        <view>Name</view>
+        <view>Decription</view>
+      </view>
+      <view class="price-grey">10,000rmb</view>  
+    </view>
   </view>
-  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+  <view class="footer"> 
+    <image src="/img/house.png"></image>
+    <image src="/img/map.png"></image>
+    <image src="/img/account.png"></image>
+  </view>
 </view>
