@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/booking/booking",
     "pages/show/show"
   ],
   "window": {

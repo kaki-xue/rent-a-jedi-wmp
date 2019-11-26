@@ -1,0 +1,24 @@
+<view class="container">
+  <image class="alien-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ__qfPeeR94xohQ_aw0d3bdlyaMIhACoKSsx7tjXVaAGG-hsBAYw&s"></image>
+  <view class="alien-details">
+    <form bindSubmit="formSubmit">
+      <view class="date-name-container">
+        <view class="alien-name">Darth Vader</view>
+          <view class="dates-container">
+            <view class="start-date-container">
+              <view class="bold-text">Start Date:</view>
+              <input name="start-date" placeholder="Type here"/>
+            </view>
+            <view class="end-date-container">
+              <view class="bold-text">End Date:</view> 
+              <input name="end-date" placeholder="Type here"/>
+            </view>
+          </view>
+        </view>
+      <view class="booking-total-container">
+        <view>Total: $12000</view>
+        <button form-type="submit" class="pay-button">Pay</button>
+      </view>  
+    </form> 
+  </view>
+</view>

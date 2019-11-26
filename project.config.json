@@ -56,8 +56,11 @@
 			"list": [
 				{
 					"id": -1,
+					"name": "pages/booking/booking",
+					"pathName": "pages/booking/booking",
 					"name": "pages/show/show",
 					"pathName": "pages/show/show",
+
 					"scene": null
 				}
 			]
