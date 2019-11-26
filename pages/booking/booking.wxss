@@ -1,0 +1,62 @@
+view {
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  padding:0px;
+  height: 100vh;
+}
+
+.booking-total-container {
+  display:flex;
+  margin-top: auto;
+  margin-bottom: 20px;
+
+}
+
+.dates-container {
+  display:flex;
+  border-bottom: 3px groove rgba(152,144,144,0.21);
+  height: 100px;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: space-between;
+
+}
+
+.alien-name {
+  font-size: 24px;
+}
+
+.start-date-container {
+  color:#989090;
+}
+
+.end-date-container {
+  color:#989090;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.pay-button {
+  color:white;
+  background-color:black;
+}
+
+.alien-details {
+  margin-top:10px;
+  width:320px;
+  display:flex;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.date-name-container {
+  display:flex;
+  flex-direction:column;
+}
+
+.alien-image {
+  border-radius: 3px;
+}
