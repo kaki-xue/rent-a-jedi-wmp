@@ -1,0 +1,54 @@
+view {
+  font-family: 'Open Sans', sans-serif;
+}
+.card-alien {
+  height: 35vh;
+  margin-top: 2vh;
+  padding: 0px 2vh 0 3vh;
+}
+
+.alien-details {
+  position:relative;
+}
+
+.price-details {
+  position:absolute;
+  font-size:12px;
+  color: #8E8787;
+  font-weight: bold;
+  right: 46px;
+  top: 11px;
+}
+
+.book-button {
+  background-color: #000000;
+  color: white;
+  box-shadow: 3px 4px #d3d1d1;
+  width: 150px;
+  border-radius: 3px;
+}
+
+.alien-name {
+  font-size:24px;
+  margin-bottom: 15px;
+}
+
+.alien-skills {
+  font-size: 18px;
+}
+
+.alien-description {
+  font-size: 18px;
+}
+
+.alien-image {
+  width: 348px;
+  height: 364px;
+  margin: 0 auto;
+  border-radius: 3px;
+  object-fit:cover;
+}
+
+.container {
+  padding:0;
+}
