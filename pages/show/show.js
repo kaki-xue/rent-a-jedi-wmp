@@ -13,6 +13,20 @@ Page({
    */
   onLoad: function (options) {
 
+    let page = this;
+
+    
+    wx.request({
+      url: "http://localhost:3000/api/v1/aliens/2",
+      method: 'GET',
+      success(res) {
+        const alien = res.data;
+        page.setData(
+          alien
+        );
+        wx.hideToast();
+      }
+    });
   },
 
   /**
