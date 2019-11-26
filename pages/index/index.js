@@ -23,11 +23,19 @@ Page({
         page.setData({
           aliens: aliens
         });
-        console.log(aliens)
+        console.log(aliens);
 
       wx.hideToast();
     }
    });
-  }
+  },
+
+  goToShow: function(event) {
+    console.log(event.currentTarget.dataset.id);
+    let id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
+  },
 
 })
