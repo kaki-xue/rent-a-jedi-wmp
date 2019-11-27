@@ -5,14 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let page = this;
 
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/2/bookings`,
+      method: 'GET',
+      success(res) {
+        const bookings = res.data.bookings;
+        page.setData({
+          bookings: bookings
+        });
+        console.log('data', page.data)
+        wx.hideToast();
+      }
+    });
+    wx.request({
+      url: `http://localhost:3000/api/v1/aliens/1`,
+      method: 'GET',
+      success(res) {
+        const alien = res.data;
+        page.setData({
+          alien: alien
+        });
+        console.log(page.data.alien)
+        wx.hideToast();
+      }
+    })
   },
 
   /**

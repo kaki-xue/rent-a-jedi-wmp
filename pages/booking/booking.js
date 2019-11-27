@@ -82,10 +82,7 @@ Page({
     const startDate = e.detail.value.start
     const alienId = page.data.alien.id
     const userId = page.data.alien.user_id
-    console.log(alienId)
-    console.log(userId)
-    console.log(endDate)
-    console.log(startDate)
+
     const booking = {
       user_id : userId,
       alien_id : alienId,
@@ -105,7 +102,7 @@ Page({
           data: booking,
           success(result){
             wx.navigateTo({
-              url: '/pages/index/index',
+              url: `/pages/user/booking?id=${userId}`,
             })  
           }
         })

@@ -5,7 +5,6 @@ App({
     console.log('beginning login')
     wx.login({
       success: (res) => {
-        console.log(res)
         // insert next code here
     wx.request({
       url: host + 'login',
@@ -15,7 +14,6 @@ App({
       },
       // insert next code here
       success: (res) => {
-        console.log(res)
         this.globalData.userId = res.data.userId
       }
     })
