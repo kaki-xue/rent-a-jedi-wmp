@@ -17,7 +17,7 @@
         </view>
       <view class="booking-total-container">
         <view>Total: $12000</view>
-        <button form-type="submit" class="pay-button">Pay</button>
+        <button form-type="submit" class="pay-button" >Pay</button>
       </view>  
     </form> 
   </view>

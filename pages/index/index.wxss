@@ -32,31 +32,34 @@ font-weight: bold;
  display:flex;
  height:18%;
  width:100%;
- border: 0.5rpx solid grey;
+ border: 0.1rpx solid grey;
 }
 
 .avatar { 
   width: 100rpx;
   height: 100rpx;
-  background-color:grey;
   margin:20rpx 10rpx 10rpx 10rpx;
   border-radius:4rpx;
+  background-size:cover;
 }
 
-.text {
-  margin-top: 20rpx;
-  margin-left:10rpx;
+.flex-space-around {
+display:flex;
+justify-content: space-between;
+width:100%;
+margin: 25rpx;
 
 }
 .price-grey {
   font-size:25rpx;
-  padding-left: 260rpx;
-  margin-top: 15rpx;  
+  margin-top: 15rpx;
+
 }
 
 .footer { 
   display:flex;
   justify-content: space-between;
+
 }
 
 .footer > image { 
