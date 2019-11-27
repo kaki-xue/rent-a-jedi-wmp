@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    
   },
 
   /**
@@ -15,17 +15,29 @@ Page({
     let page = this;
 
     wx.request({
-      url: `http://localhost:3000/api/v1/users/${options.id}`,
+      url: `http://localhost:3000/api/v1/users/2/bookings`,
       method: 'GET',
       success(res) {
-        const user = res.data;
+        const bookings = res.data.bookings;
         page.setData({
-          user: user
+          bookings: bookings
         });
+        console.log('data', page.data)
         wx.hideToast();
-        // need to change route for API so that users/:id/bookings exists
       }
     });
+    wx.request({
+      url: `http://localhost:3000/api/v1/aliens/1`,
+      method: 'GET',
+      success(res) {
+        const alien = res.data;
+        page.setData({
+          alien: alien
+        });
+        console.log(page.data.alien)
+        wx.hideToast();
+      }
+    })
   },
 
   /**
