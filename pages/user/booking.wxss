@@ -10,10 +10,25 @@
   font-style: normal;
 }
 
+.text-white {
+  color: white;
+}
+
 .banner {
  width:100%;
  background-size:cover;
  margin-bottom: 40rpx;
+}
+
+.avatar { 
+  width: 200rpx;
+  height: 150rpx;
+  border-radius: 6rpx;
+  background-size: cover;
+  background-position: center top;
+  position: absolute;
+  margin-left: 170px;
+  margin-top: -18px;
 }
 
 .margin-top {
@@ -37,6 +52,7 @@ font-weight: bold;
   padding:2ch;
   height: 200rpx;
   align-items: center;
+  position: relative;
 }
 .card > .text {
   font-size:30rpx;

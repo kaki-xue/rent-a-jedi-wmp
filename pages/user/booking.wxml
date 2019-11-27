@@ -1,22 +1,17 @@
 <!--pages/user/booking.wxml-->
 <view class="container">
-  <view class="banner" style="height: 30vh; background-image:url(https://images.unsplash.com/photo-1484824823018-c36f00489002?);">
-    <view class="margin-top">My bookings</view>
+  <view class="banner" style="height: 30vh; opacity:0.7; background-image:url(https://rekordcenturion.co.za/wp-content/uploads/sites/87/2018/05/Star-Wars-saga-1-6.jpg);">
+    <view class="margin-top text-white">My bookings</view>
   </view>
   
-  <view wx:for="{{bookings}}" wx:key wx:for-item="booking" class="cards-center">
-    <view>{{booking.start_date}} to {{booking.end_date}}</view>
+  <view class="cards-center">
+    <view>11 November 2019 to 12 November 2019</view>
     <view class="card">
       <view class="text">
-        <view>{{alien.name}}</view>
+        <view>Chewbecca</view>
       </view>
-      <view class="price">${{alien.price_per_day}} </view>
+      <view class="avatar" style="background-image:url(https://vignette.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest/scale-to-width-down/500?cb=20190830144754);"></view>
+      <view class="price">$3000000</view>
     </view>
-  </view>
-
-  <view class="footer"> 
-    <image src="/img/house.png"></image>
-    <image src="/img/map.png"></image>
-    <image src="/img/account.png"></image>
   </view>
 </view>

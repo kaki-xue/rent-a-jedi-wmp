@@ -22,7 +22,7 @@
         "selectedIconPath": "img/house.png"
       },
       {
-        "pagePath": "pages/show/show",
+        "pagePath": "pages/user/booking",
         "iconPath": "img/account.png",
         "selectedIconPath": "img/account.png"
       }

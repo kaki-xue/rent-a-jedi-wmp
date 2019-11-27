@@ -28,9 +28,10 @@ Page({
   },
 
   goToShow: function(event) {
+    console.log(event)
     let id = event.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/pages/show/show?id=${id}`,
+      url: `/pages/show/show?id=${id}`
     })
   },
 

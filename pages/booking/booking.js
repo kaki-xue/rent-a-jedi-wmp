@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
     let page = this;
     wx.request({
-      url: `http://localhost:3000/api/v1/aliens/${options.id}`,
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/aliens/${options.id}`,
       method: 'GET',
       success(res) {
         const alien = res.data;
@@ -82,7 +82,9 @@ Page({
     const startDate = e.detail.value.start
     const alienId = page.data.alien.id
     const userId = page.data.alien.user_id
-
+    console.log('userId', userId)
+    this.setData({userId: userId})
+    console.log('user data?', this.data)
     const booking = {
       user_id : userId,
       alien_id : alienId,
@@ -97,11 +99,11 @@ Page({
       showCancel: false,
       success: function (res) {
         wx.request({
-          url: `http://localhost:3000/api/v1/bookings`,
+          url: `https://rent-a-jedi.herokuapp.com/api/v1/bookings`, 
           method: 'POST',
           data: booking,
           success(result){
-            wx.navigateTo({
+            wx.switchTab({
               url: `/pages/user/booking?id=${userId}`,
             })  
           }
