@@ -3,7 +3,7 @@
   <view class="banner" style="height: 30vh; background-image:url(https://images.unsplash.com/photo-1484824823018-c36f00489002?);">
     <view class="margin-top">My bookings</view>
   </view>
-   
+  
   <view wx:for="{{bookings}}" wx:key wx:for-item="booking" class="cards-center">
     <view>{{booking.start_date}} to {{booking.end_date}}</view>
     <view class="card">
