@@ -5,10 +5,14 @@ view {
   height: 35vh;
   margin-top: 2vh;
   padding: 0px 2vh 0 3vh;
+
 }
 
 .alien-details {
   position:relative;
+  margin: 30rpx;
+  height:100%;
+
 }
 
 .price-details {
@@ -25,12 +29,16 @@ view {
   color: white;
   box-shadow: 3px 4px #d3d1d1;
   width: 150px;
-  border-radius: 3px;
+  border-radius: 6px;
+  margin-top: 150rpx;
+
 }
 
 .alien-name {
   font-size:24px;
   margin-bottom: 15px;
+  border-bottom: 0.5rpx solid#e3e7f1;
+
 }
 
 .alien-skills {
@@ -47,6 +55,7 @@ view {
   margin: 0 auto;
   border-radius: 3px;
   object-fit:cover;
+  margin-left: 25rpx;
 }
 
 .container {

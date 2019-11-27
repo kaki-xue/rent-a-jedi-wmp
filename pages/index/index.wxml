@@ -9,14 +9,9 @@
       <view class="avatar" style="background-image:url({{alien.image}});"></view>
         <view class="flex-space-around">
           <view>{{alien.name}}</view>
-          <view class="price-grey">{{alien.price_per_day}} $</view>
+          <view class="price-grey">$ {{alien.price_per_day}}</view>
         </view>
       </view>
     </view>
-  </view>
-  <view class="footer"> 
-    <image src="/img/house.png"></image>
-    <image src="/img/map.png"></image>
-    <image src="/img/account.png"></image>
   </view>
 </view>
