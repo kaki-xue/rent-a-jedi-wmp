@@ -21,7 +21,7 @@ Page({
       url: `http://localhost:3000/api/v1/aliens/${options.id}`,
       method: 'GET',
       success(res) {
-        console.log(res);
+        console.log(res.data);
         const alien = res.data;
         page.setData(
           alien

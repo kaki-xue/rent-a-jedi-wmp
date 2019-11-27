@@ -2,10 +2,10 @@
   <image class="alien-image" src="https://imagesvc.timeincapp.com/v3/fan/image?url=https://dorksideoftheforce.com/files/2018/02/darth-vader-1-cover-header-1536x864.jpg&"></image>
   <view class="card-alien">
     <view class="alien-details">
-      <view class="alien-name">{{alien.name}}</view>
-      <view class="alien-skills">Skills: Being Evil</view>
-      <view class="alien-description">Description: I am a very evil person BOOOOO</view>
-      <view class="price-details">$12000</view>
+      <view class="alien-name">{{name}}</view>
+      <view class="alien-skills">{{skill}}</view>
+      <view class="alien-description">{{description}}</view>
+      <view class="price-details">{{price_per_day}} rmb</view>
     </view>
   </view>
 
