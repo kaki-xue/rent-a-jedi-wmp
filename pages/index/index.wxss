@@ -30,17 +30,19 @@ font-weight: bold;
 
 .card {
  display:flex;
- height:18%;
+ height:180rpx;
  width:100%;
- border: 0.1rpx solid grey;
+ border-bottom: .5rpx solid #e3e7f1;
 }
 
 .avatar { 
-  width: 100rpx;
-  height: 100rpx;
+  width: 200rpx;
+  height: 150rpx;
   margin:20rpx 10rpx 10rpx 10rpx;
-  border-radius:4rpx;
+  border-radius:6rpx;
   background-size:cover;
+  background-position: center top;
+
 }
 
 .flex-space-around {
@@ -59,6 +61,8 @@ margin: 25rpx;
 .footer { 
   display:flex;
   justify-content: space-between;
+  background-color: #e3e7f1;
+  width:100%;
 
 }
 
