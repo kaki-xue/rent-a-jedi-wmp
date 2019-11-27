@@ -12,7 +12,19 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    let page = this;
+    wx.request({
+      url: `http://localhost:3000/api/v1/aliens/${options.id}`,
+      method: 'GET',
+      success(res) {
+        const alien = res.data;
+        page.setData({
+          alien: alien
+        });
+        console.log(page.data)
+        wx.hideToast();
+      }
+    });
   },
 
   /**
@@ -62,5 +74,42 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  formSubmit: function (e) {
+    let page = this;
+    const endDate = e.detail.value.end
+    const startDate = e.detail.value.start
+    const alienId = page.data.alien.id
+    const userId = page.data.alien.user_id
+    console.log(alienId)
+    console.log(userId)
+    console.log(endDate)
+    console.log(startDate)
+    const booking = {
+      user_id : userId,
+      alien_id : alienId,
+      start_date : startDate,
+      end_date : endDate
+    } 
+
+    wx.showModal({
+      title: 'The Force Is With You!',
+      content: 'See your booking',
+      confirmText: "Go!",
+      showCancel: false,
+      success: function (res) {
+        wx.request({
+          url: `http://localhost:3000/api/v1/bookings`,
+          method: 'POST',
+          data: booking,
+          success(result){
+            wx.navigateTo({
+              url: '/pages/index/index',
+            })  
+          }
+        })
+      }
+    })
   }
 })

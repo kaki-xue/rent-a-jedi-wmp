@@ -65,6 +65,20 @@
 					"id": -1,
 					"name": "pages/show/show",
 					"pathName": "pages/show/show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/booking/booking",
+					"pathName": "pages/booking/booking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]
