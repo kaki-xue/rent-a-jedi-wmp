@@ -1,13 +1,13 @@
 <view class="container">
-  <image class="alien-image" src="https://imagesvc.timeincapp.com/v3/fan/image?url=https://dorksideoftheforce.com/files/2018/02/darth-vader-1-cover-header-1536x864.jpg&"></image>
+  <image class="alien-image" src="{{image}}"></image>
   <view class="card-alien">
     <view class="alien-details">
       <view class="alien-name">{{name}}</view>
-      <view class="alien-skills">{{skill}}</view>
+      <view class="alien-skills">Skill: {{skill}}</view>
       <view class="alien-description">{{description}}</view>
       <view class="price-details">{{price_per_day}} rmb</view>
     </view>
   </view>
 
-  <button class="book-button" bindtap="goToBooking">Book</button>
+  <button class="book-button" bindtap="goToBooking" data-id="{{id}}">Book</button>
 </view>

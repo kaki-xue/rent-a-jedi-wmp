@@ -70,8 +70,13 @@
 				},
 				{
 					"id": -1,
+
+					"name": "pages/booking/booking",
+					"pathName": "pages/booking/booking",
+
 					"name": "pages/user/booking",
 					"pathName": "pages/user/booking",
+
 					"query": "",
 					"scene": null
 				},
