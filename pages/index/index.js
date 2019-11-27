@@ -27,6 +27,7 @@ Page({
    });
   },
 
+
   goToShow: function(event) {
     console.log(event)
     let id = event.currentTarget.dataset.id;
@@ -34,5 +35,4 @@ Page({
       url: `/pages/show/show?id=${id}`
     })
   },
-
 })
