@@ -1,3 +1,4 @@
+const app = getApp()
 // pages/user/booking.js
 Page({
 
@@ -13,21 +14,23 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-
+    console.log('options', options)
+    const lastPage = getCurrentPages().slice(-1)[0]
+    console.log('last page', lastPage)
     wx.request({
-      url: `http://localhost:3000/api/v1/users/2/bookings`,
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/15/bookings`,
       method: 'GET',
       success(res) {
         const bookings = res.data.bookings;
+        console.log('bookings', bookings)
         page.setData({
           bookings: bookings
         });
-        console.log('data', page.data)
         wx.hideToast();
       }
     });
     wx.request({
-      url: `http://localhost:3000/api/v1/aliens/1`,
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/aliens/`,
       method: 'GET',
       success(res) {
         const alien = res.data;

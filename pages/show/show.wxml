@@ -8,6 +8,6 @@
       <view class="price-details">$ {{price_per_day}}</view>
     </view>
   </view>
-
   <button class="book-button" bindtap="goToBooking" data-id="{{id}}">Book</button>
 </view>
+

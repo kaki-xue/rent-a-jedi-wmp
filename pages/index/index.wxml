@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="banner" style="height: 30vh; background-image:url(https://images.unsplash.com/photo-1484824823018-c36f00489002?);">
-  <view class="margin-top">Welcome to Rent a Jedi</view>
+  <view class="banner" style="height: 30vh; opacity:0.7; background-image:url(https://rekordcenturion.co.za/wp-content/uploads/sites/87/2018/05/Star-Wars-saga-1-6.jpg);">
+  <view class="margin-top text-white">Welcome to Rent a Jedi</view>
   </view>
   <view class="card-container">
   <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
