@@ -12,7 +12,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let page = this;
 
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${options.id}`,
+      method: 'GET',
+      success(res) {
+        const user = res.data;
+        page.setData({
+          user: user
+        });
+        wx.hideToast();
+        // need to change route for API so that users/:id/bookings exists
+      }
+    });
   },
 
   /**
