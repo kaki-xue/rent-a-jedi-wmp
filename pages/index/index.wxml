@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="banner" style="height: 30vh; background-image:url(https://images.unsplash.com/photo-1484824823018-c36f00489002?);">
-  <view class="margin-top">Welcome to rent a Jedi</view>
+  <view class="margin-top">Welcome to Rent a Jedi</view>
   </view>
   <view class="card-container">
   <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
@@ -9,7 +9,7 @@
       <view class="avatar" style="background-image:url({{alien.image}});"></view>
         <view class="flex-space-around">
           <view>{{alien.name}}</view>
-          <view class="price-grey">{{alien.price_per_day}} rmb</view>
+          <view class="price-grey">{{alien.price_per_day}} $</view>
         </view>
       </view>
     </view>
