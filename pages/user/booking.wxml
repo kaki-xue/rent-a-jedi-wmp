@@ -21,13 +21,8 @@
             <view>Yoda * 1</view>
             <view>Princess Lea * 2</view>
           </view>
-          <view class="price">Total 100000 $</view>
+          <view class="price">$ Total 100000 </view>
         </view>
-      </view>
-      <view class="footer"> 
-        <image src="/img/house.png"></image>
-        <image src="/img/map.png"></image>
-        <image src="/img/account.png"></image>
       </view>
     </view>
  
