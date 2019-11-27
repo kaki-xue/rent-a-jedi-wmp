@@ -1,0 +1,33 @@
+<!--pages/user/booking.wxml-->
+<view class="container">
+  <view class="banner" style="height: 30vh; background-image:url(https://images.unsplash.com/photo-1484824823018-c36f00489002?);">
+  <view class="margin-top">My bookings</view>
+    </view>
+   
+    <view class="cards-center">
+      <view>Mon 25th Nov</view>
+        <view class="card">
+          <view class="text">
+            <view>Yoda * 2</view>
+            <view>Princess Lea * 5</view>
+          </view>
+          <view class="price">Total 100000 $</view>
+        </view>
+      </view>
+    <view class="cards-center">
+      <view>Wed 27th Nov</view> 
+        <view class="card">
+          <view class="text">
+            <view>Yoda * 1</view>
+            <view>Princess Lea * 2</view>
+          </view>
+          <view class="price">Total 100000 $</view>
+        </view>
+      </view>
+      <view class="footer"> 
+        <image src="/img/house.png"></image>
+        <image src="/img/map.png"></image>
+        <image src="/img/account.png"></image>
+      </view>
+    </view>
+ 

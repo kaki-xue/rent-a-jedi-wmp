@@ -1,0 +1,68 @@
+/* pages/user/booking.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height:100%; 
+  padding:0px;
+  font-family: Roboto;
+  font-style: normal;
+}
+
+.banner {
+ width:100%;
+ background-size:cover;
+ margin-bottom: 40rpx;
+}
+
+.margin-top {
+  margin-top: 10%;
+margin-left: 20rpx;
+font-weight: bold;
+}
+
+.cards-center {
+  width:90%;
+  margin:5%;
+  height: 100%;
+  margin-right: 10rpx;
+
+}
+.card { 
+  display:flex;
+  justify-content: space-between;
+  width:80%;
+  border:0.5ch solid  #e3e7f1;
+  padding:2ch;
+  height: 200rpx;
+  align-items: center;
+}
+.card > .text {
+  font-size:30rpx;
+}
+
+.price { 
+  font-size:20rpx;
+  color:#738598;
+  margin-top: 160rpx;
+
+}
+
+.text > view {
+  margin:10rpx;
+}
+
+.footer { 
+  display:flex;
+  justify-content: space-between;
+  background-color: #e3e7f1;
+  width:100%;
+}
+
+.footer > image { 
+  width: 30px;
+  height: 30px;
+  margin:70rpx;
+}
+
