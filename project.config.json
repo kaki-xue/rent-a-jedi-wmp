@@ -86,6 +86,13 @@
 					"id": -1,
 					"name": "aliens/new/new",
 					"pathName": "aliens/new/new",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/booking/booking",
+					"pathName": "pages/booking/booking",
 					"scene": null
 				}
 			]
