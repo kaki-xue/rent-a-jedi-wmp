@@ -27,6 +27,11 @@
         "pagePath": "aliens/index/index",
         "iconPath": "img/account.png",
         "selectedIconPath": "img/account.png"
+      },
+      {
+        "pagePath": "pages/user/booking",
+        "iconPath": "img/booking.png",
+        "selectedIconPath": "img/booking.png"
       }
     ]
   },
