@@ -44,6 +44,7 @@ margin: 40rpx;
   font-weight: lighter;
   color:white;
   background-color:black;
+  width: 30%;
 }
 input {
   font-size:0.5ch;

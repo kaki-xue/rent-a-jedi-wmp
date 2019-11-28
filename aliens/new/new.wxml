@@ -7,27 +7,27 @@
   <view class="form-container">
       <view class="form-margin">
         <view class="section__title">Name</view>
-        <input name="input" placeholder="**Enter your Jedi name" />
+        <input name="input_1" placeholder="**Enter your Jedi name" />
       </view>
       <view class="form-margin">
         <view class="section__title">Skill</view>
-        <input name="input" placeholder="**Enter your Jedi skill" />
+        <input name="input_2" placeholder="**Enter your Jedi skill" />
       </view>
       <view class="form-margin">
         <view class="section__title">Description</view>
-        <input name="input" placeholder="**small description" />
+        <input name="input_3" placeholder="**small description" />
       </view>
       <view class="form-margin">
         <view class="section__title">Renting price</view>
-        <input name="input" placeholder="**Price in $" />
+        <input name="input_4" placeholder="**Price in $" />
       </view>
       <view class="form-margin">
         <view class="section__title">Image</view>
-        <input name="input" placeholder="**Enter url" />
+        <input name="input_5" placeholder="**Enter url" />
       </view>
     </view>
     
     <view class="btn-area">
-      <button class="btn-black" bindtap="submit">Submit</button>
+      <button class="btn-black" form-type="submit">Submit</button>
     </view>
   </form>

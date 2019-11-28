@@ -8,16 +8,27 @@ Page({
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  
-  onLoad: function (options) {
-  const page = this.page
-  },
-  // submit: function (event) {
-  //   console.log(event),
+  formSubmit: function (event) {
+    let page = this;
+    let aliens = {};
+    aliens.name = event.detail.value.input_1
+    aliens.skill = event.detail.value.input_2
+    aliens.description = event.detail.value.input_3
+    aliens.price_per_day = event.detail.value.input_4
+    aliens.image = event.detail.value.input_5
+    wx.request({
+      url: 'https://rent-a-jedi.herokuapp.com/api/v1/users/16/aliens',
+      method: 'post',
+      data: aliens,
+      success: function (res) {
+        console.log("success",res);
+        const id = res.data.id
+        wx.reLaunch({
+          url: `/aliens/index/index`,
+        })
+      }
+    })
+},
   //     let newAlien = {};
   //   newAlien.name = event.detail.value.name
   //   newAlien.skill = event.detail.value.skill
@@ -38,6 +49,16 @@ Page({
   //   })
 
   // },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  
+  onLoad: function (options) {
+    console.log(options);
+  const page = this.page
+  },
+ 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
