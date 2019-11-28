@@ -24,8 +24,8 @@
       },
       {
         "pagePath": "pages/user/booking",
-        "iconPath": "img/account.png",
-        "selectedIconPath": "img/account.png"
+        "iconPath": "img/booking.png",
+        "selectedIconPath": "img/booking.png"
       }
     ]
   },

@@ -34,17 +34,6 @@ Page({
         wx.hideToast();
       }
     });
-    wx.request({
-      url: `https://rent-a-jedi.herokuapp.com/api/v1/aliens/`,
-      method: 'GET',
-      success(res) {
-        const alien = res.data;
-        page.setData({
-          alien: alien
-        });
-        wx.hideToast();
-      }
-    })
   },
 
   /**
@@ -60,7 +49,7 @@ Page({
   onShow: function () {
     let page = this;
     const userId = getApp().globalData.userId
-
+    
     wx.request({
       url: `https://rent-a-jedi.herokuapp.com/api/v1/users/${userId}/bookings`,
       method: 'get',
@@ -73,24 +62,12 @@ Page({
           booking.start_date = startDate.toLocaleString('en-gb', { day: "numeric", month: "long", year: "numeric" })
           booking.end_date = endDate.toLocaleString('en-gb', { day: "numeric", month: "long", year: "numeric" })
         });
-        console.log('bookings after locale string on show', bookings)
         page.setData({
           bookings: bookings
         });
         wx.hideToast();
       }
     });
-    wx.request({
-      url: `https://rent-a-jedi.herokuapp.com/api/v1/aliens/`,
-      method: 'GET',
-      success(res) {
-        const alien = res.data;
-        page.setData({
-          alien: alien
-        });
-        wx.hideToast();
-      }
-    })
   },
 
   /**
@@ -126,5 +103,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  goToShow: function (event) {
+    let id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`
+    })
   }
 })
