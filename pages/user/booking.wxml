@@ -8,7 +8,7 @@
     <view>{{booking.start_date}} to {{booking.end_date}}</view>
     <view class="card">
       <view class="text">
-        <view>Chewbecca</view>
+        <view>{{booking.alien.name}}</view>
       </view>
       <view class="avatar" style="background-image:url(https://vignette.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest/scale-to-width-down/500?cb=20190830144754);"></view>
       <view class="price">$3000000</view>
