@@ -1,17 +1,35 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="banner" style="height: 30vh; opacity:0.7; background-image:url(https://rekordcenturion.co.za/wp-content/uploads/sites/87/2018/05/Star-Wars-saga-1-6.jpg);">
+  <view class="banner" style=" background-image:url(https://images.unsplash.com/photo-1521985429101-21bed8b75e47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
   <view class="margin-top text-white">Welcome to Rent a Jedi</view>
   </view>
-  <view class="card-container">
-  <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
-    <view class="card" bindtap="goToShow" data-id="{{alien.id}}">
-      <view class="avatar" style="background-image:url({{alien.image}});"></view>
-        <view class="flex-space-around">
-          <view>{{alien.name}}</view>
-          <view class="price-grey">$ {{alien.price_per_day}}</view>
+
+<view class="container-pic">
+    <view class="favorite-page"style="background-image:url(http://images6.fanpop.com/image/quiz/991000/991572_1365017325990_447_300.jpg);">
+    <view class="white-bold">This month favorite</view>
+    <button bindtap="GotoFav">Rent it now!</button>
+  </view>
+</view>
+
+ <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+    
+    <view class="card-container">
+    <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
+      <view class="card" bindtap="goToShow" data-id="{{alien.id}}">
+        <view class="avatar" style="background-image:url({{alien.image}});"></view>
+          <view class="flex-space-around">
+            <view>{{alien.name}}</view>
+            <view class="price-grey">$ {{alien.price_per_day}}</view>
+          </view>
         </view>
       </view>
     </view>
-  </view>
 </view>
