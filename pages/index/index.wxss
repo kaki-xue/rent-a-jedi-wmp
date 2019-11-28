@@ -63,6 +63,33 @@ swiper image{
   height: 100%;
 }
 
+.page_db {
+  height: 30%;
+  width:100%;
+  margin:20rpx;
+  background-color:black;
+  margin:0rpx;
+  color:white;
+  text-align:center;
+  padding:20rpx;
+}
+.search-order {
+  border:1rpx solid grey;
+  width:80%;
+  border-radius:6rpx;
+  margin-left:70rpx;
+
+}
+.btn-white {
+  width:300rpx;
+}
+.btn-black {
+font-size:25rpx;
+height:60rpx;
+width:150rpx;
+margin-top:15rpx;
+}
+
 
 .card {
  display:flex;

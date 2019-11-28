@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/booking/booking",
     "pages/show/show",
-    "pages/user/booking"
+    "pages/user/booking",
+    "aliens/new/new"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,6 +29,5 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
