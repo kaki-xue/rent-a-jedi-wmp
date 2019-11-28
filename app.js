@@ -1,8 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    const host = 'http://localhost:3000/'
-    console.log('beginning login')
+    const host = 'https://rent-a-jedi.herokuapp.com/'
     wx.login({
       success: (res) => {
         // insert next code here
