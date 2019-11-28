@@ -11,14 +11,28 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
+    let page = this;
+      wx.request({
+        url: "https://rent-a-jedi.herokuapp.com/api/v1/users/16/aliens",
+        method: 'GET',
+        success(res) {
+          const aliens = res.data.aliens;
+          page.setData({
+            aliens: aliens
+          });
 
-  },
+          wx.hideToast();
+        }
+      });
+    },
+  
+   
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 

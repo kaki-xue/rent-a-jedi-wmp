@@ -15,7 +15,6 @@ Page({
   
   onLoad: function (options) {
   const page = this.page
-
   },
   // submit: function (event) {
   //   console.log(event),
