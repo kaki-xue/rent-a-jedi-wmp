@@ -14,15 +14,20 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-    console.log('options', options)
-    const lastPage = getCurrentPages().slice(-1)[0]
-    console.log('last page', lastPage)
+    const userId = getApp().globalData.userId
+
     wx.request({
-      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/15/bookings`,
-      method: 'GET',
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/${userId}/bookings`,
+      method: 'get',
       success(res) {
         const bookings = res.data.bookings;
-        console.log('bookings', bookings)
+        // this will format date to look DD November YYYY
+        bookings.map(function (booking) {
+          const startDate = new Date(booking.start_date)
+          const endDate = new Date(booking.end_date)
+          booking.start_date = startDate.toLocaleString('en-gb', { day: "numeric", month: "long", year: "numeric" })
+          booking.end_date = endDate.toLocaleString('en-gb', { day: "numeric", month: "long", year: "numeric" })
+        });
         page.setData({
           bookings: bookings
         });
@@ -37,7 +42,6 @@ Page({
         page.setData({
           alien: alien
         });
-        console.log(page.data.alien)
         wx.hideToast();
       }
     })
@@ -54,7 +58,39 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let page = this;
+    const userId = getApp().globalData.userId
 
+    wx.request({
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/${userId}/bookings`,
+      method: 'get',
+      success(res) {
+        const bookings = res.data.bookings;
+        // this will format date to look DD November YYYY
+        bookings.map(function (booking) {
+          const startDate = new Date(booking.start_date)
+          const endDate = new Date(booking.end_date)
+          booking.start_date = startDate.toLocaleString('en-gb', { day: "numeric", month: "long", year: "numeric" })
+          booking.end_date = endDate.toLocaleString('en-gb', { day: "numeric", month: "long", year: "numeric" })
+        });
+        console.log('bookings after locale string on show', bookings)
+        page.setData({
+          bookings: bookings
+        });
+        wx.hideToast();
+      }
+    });
+    wx.request({
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/aliens/`,
+      method: 'GET',
+      success(res) {
+        const alien = res.data;
+        page.setData({
+          alien: alien
+        });
+        wx.hideToast();
+      }
+    })
   },
 
   /**

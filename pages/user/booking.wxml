@@ -4,8 +4,8 @@
     <view class="margin-top text-white">My bookings</view>
   </view>
   
-  <view class="cards-center">
-    <view>11 November 2019 to 12 November 2019</view>
+  <view wx:for="{{bookings}}" wx:for-index="index" wx:key wx:for-item="booking" class="cards-center">
+    <view>{{booking.start_date}} to {{booking.end_date}}</view>
     <view class="card">
       <view class="text">
         <view>Chewbecca</view>
