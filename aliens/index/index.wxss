@@ -40,4 +40,9 @@
 font-size: 25rpx;
 background-color:black;
 color:white;
+margin-left: 25%;
+border-radius:6rpx;
+padding-left: 30rpx;
+padding-top: 20rpx;
+margin-bottom:5rpx;
 }

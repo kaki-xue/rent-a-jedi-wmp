@@ -17,7 +17,7 @@ Page({
     aliens.price_per_day = event.detail.value.input_4
     aliens.image = event.detail.value.input_5
     wx.request({
-      url: 'https://rent-a-jedi.herokuapp.com/api/v1/users/16/aliens',
+      url: 'https://rent-a-jedi.herokuapp.com/api/v1/users/22/aliens',
       method: 'post',
       data: aliens,
       success: function (res) {

@@ -19,7 +19,7 @@ goToAdd: function(e){
   onLoad: function(options) {
     let page = this;
       wx.request({
-        url: "https://rent-a-jedi.herokuapp.com/api/v1/users/16/aliens",
+        url: "https://rent-a-jedi.herokuapp.com/api/v1/users/22/aliens",
         method: 'GET',
         success(res) {
           const aliens = res.data.aliens;
