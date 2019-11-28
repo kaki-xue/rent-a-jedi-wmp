@@ -4,7 +4,8 @@
     "pages/booking/booking",
     "pages/show/show",
     "pages/user/booking",
-    "aliens/new/new"
+    "aliens/new/new",
+    "aliens/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,7 +24,7 @@
         "selectedIconPath": "img/house.png"
       },
       {
-        "pagePath": "pages/user/booking",
+        "pagePath": "aliens/index/index",
         "iconPath": "img/account.png",
         "selectedIconPath": "img/account.png"
       }

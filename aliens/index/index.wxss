@@ -1,1 +1,35 @@
 /* aliens/index/index.wxss */
+.banner {
+  height: 100vh;
+  width:100%;
+  background-size:cover;
+  text-align:center;
+}
+.card-container { 
+  height:900rpx;
+  margin:0rpx;
+  width:100%;
+}
+.margin-top{
+  color:white;
+  padding-top:250rpx;
+}
+
+
+.card {
+ display:flex;
+ height:180rpx;
+ width:100%;
+ border-bottom: .5rpx solid #e3e7f1;
+ margin-top: 3px;
+}
+
+.avatar { 
+  width: 200rpx;
+  height: 150rpx;
+  margin:20rpx 10rpx 10rpx 10rpx;
+  border-radius:6rpx;
+  background-size:cover;
+  background-position: center top;
+
+}

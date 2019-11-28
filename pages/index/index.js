@@ -41,6 +41,21 @@ Page({
       userInfo: e.detail.userInfo
     })
   },
+
+  formSubmit:function(e){
+    let page = this;
+   const query = e.detail.value.query;
+   console.log(query);
+   wx.request({
+     url:`https://rent-a-jedi.herokuapp.com/api/v1/aliens?query=${query}`,
+     method:"get",
+     success: function(res) {
+      page.setData ({
+        aliens: res.data.aliens
+      })
+     }
+   })
+  },
   
   onLoad: function (options) {
     let page = this;

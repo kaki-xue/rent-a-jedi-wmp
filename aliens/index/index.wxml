@@ -1,2 +1,16 @@
 <!--aliens/index/index.wxml-->
-<text>aliens/index/index.wxml</text>
+ <view class="banner" style=" background-image:url(https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+  <view class="margin-top">My aliens</view>
+  </view>
+   <view class="card-container">
+    <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
+      <view class="card" bindtap="goToShow" data-id="{{alien.id}}">
+        <view class="avatar" style="background-image:url({{alien.image}});"></view>
+          <view class="flex-space-around">
+            <view>{{alien.name}}</view>
+            <view class="price-grey">$ {{alien.price_per_day}}</view>
+          </view>
+        </view>
+      </view>
+      <button>add new alien in the family</button>
+    </view>

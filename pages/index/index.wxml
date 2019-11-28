@@ -22,9 +22,7 @@
 </swiper>
 
     <form bindsubmit="formSubmit" bindreset="formReset"  class="page_db">
-        <view class="section__title">Search here</view>
-        <input class="search-order" name="input" placeholder="" />
-        <button class="btn-black" bindtap="submit">Submit</button>
+        <input class="search-order" name="query" placeholder="search" /><button class="btn-black" form-type="submit">Submit</button>
     </form>
     <view class="card-container">
     <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
