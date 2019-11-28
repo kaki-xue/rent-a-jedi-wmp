@@ -1,0 +1,33 @@
+<!--aliens/new/new.wxml-->
+
+<form bindsubmit="formSubmit" bindreset="formReset" class="form-white">
+  <view class="banner" style=" background-image:url(https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+  <view class="margin-top">Add your new Jedi</view>
+  </view>
+  <view class="form-container">
+      <view class="form-margin">
+        <view class="section__title">Name</view>
+        <input name="input" placeholder="**Enter your Jedi name" />
+      </view>
+      <view class="form-margin">
+        <view class="section__title">Skill</view>
+        <input name="input" placeholder="**Enter your Jedi skill" />
+      </view>
+      <view class="form-margin">
+        <view class="section__title">Description</view>
+        <input name="input" placeholder="**small description" />
+      </view>
+      <view class="form-margin">
+        <view class="section__title">Renting price</view>
+        <input name="input" placeholder="**Price in $" />
+      </view>
+      <view class="form-margin">
+        <view class="section__title">Image</view>
+        <input name="input" placeholder="**Enter url" />
+      </view>
+    </view>
+    
+    <view class="btn-area">
+      <button class="btn-black" bindtap="submit">Submit</button>
+    </view>
+  </form>

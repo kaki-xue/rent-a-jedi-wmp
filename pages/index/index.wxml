@@ -7,9 +7,10 @@
 <view class="container-pic">
     <view class="favorite-page"style="background-image:url(http://images6.fanpop.com/image/quiz/991000/991572_1365017325990_447_300.jpg);">
     <view class="white-bold">This month favorite</view>
-    <button bindtap="GotoFav">Rent it now!</button>
+    <button class="btn-white" bindtap="gotoFav">Rent it now!</button>
   </view>
 </view>
+
 
  <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -20,7 +21,11 @@
   </block>
 </swiper>
 
-    
+    <form bindsubmit="formSubmit" bindreset="formReset"  class="page_db">
+        <view class="section__title">Search here</view>
+        <input class="search-order" name="input" placeholder="" />
+        <button class="btn-black" bindtap="submit">Submit</button>
+    </form>
     <view class="card-container">
     <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
       <view class="card" bindtap="goToShow" data-id="{{alien.id}}">

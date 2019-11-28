@@ -1,10 +1,11 @@
 //app.js
 App({
   onLaunch: function () {
-    const host = 'http://localhost:3000/'
+    const host = 'https://rent-a-jedi.herokuapp.com/'
     console.log('beginning login')
     wx.login({
       success: (res) => {
+        console.log('result of initial login', res)
         // insert next code here
     wx.request({
       url: host + 'login',
@@ -14,6 +15,7 @@ App({
       },
       // insert next code here
       success: (res) => {
+        console.log('result of login',res)
         this.globalData.userId = res.data.userId
       }
     })
