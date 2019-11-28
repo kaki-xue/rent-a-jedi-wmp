@@ -1,4 +1,6 @@
 // pages/booking/booking.js
+const app = getApp()
+
 Page({
 
   /**
@@ -81,16 +83,17 @@ Page({
     const endDate = e.detail.value.end
     const startDate = e.detail.value.start
     const alienId = page.data.alien.id
-    const userId = page.data.alien.user_id
-    console.log('userId', userId)
-    this.setData({userId: userId})
-    console.log('user data?', this.data)
+    const userId = app.globalData.userId
+    console.log(userId)
+    
     const booking = {
       user_id : userId,
       alien_id : alienId,
       start_date : startDate,
       end_date : endDate
     } 
+
+    console.log('booking before post request',booking)
 
     wx.showModal({
       title: 'The Force Is With You!',
@@ -103,6 +106,7 @@ Page({
           method: 'POST',
           data: booking,
           success(result){
+            console.log('result of post', result)
             wx.switchTab({
               url: `/pages/user/booking?id=${userId}`,
             })  
