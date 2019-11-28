@@ -1,17 +1,17 @@
 <!--pages/user/booking.wxml-->
 <view class="container">
   <view class="banner" style="height: 30vh; opacity:0.7; background-image:url(https://rekordcenturion.co.za/wp-content/uploads/sites/87/2018/05/Star-Wars-saga-1-6.jpg);">
-    <view class="margin-top text-white">My bookings</view>
+    <view class="margin-top text-white">My Bookings</view>
   </view>
   
-  <view wx:for="{{bookings}}" wx:for-index="index" wx:key wx:for-item="booking" class="cards-center">
+  <view bindtap="goToShow" wx:for="{{bookings}}" wx:for-index="index" wx:key wx:for-item="booking" class="cards-center" data-id="{{booking.alien_id}}">
     <view>{{booking.start_date}} to {{booking.end_date}}</view>
     <view class="card">
       <view class="text">
         <view>{{booking.alien.name}}</view>
       </view>
-      <view class="avatar" style="background-image:url(https://vignette.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest/scale-to-width-down/500?cb=20190830144754);"></view>
-      <view class="price">$3000000</view>
+      <view class="avatar" style="background-image:url({{booking.alien.image}});"></view>
+      <view class="price">${{booking.alien.price_per_day}}</view>
     </view>
   </view>
 </view>

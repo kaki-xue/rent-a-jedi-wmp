@@ -34,17 +34,6 @@ Page({
         wx.hideToast();
       }
     });
-    wx.request({
-      url: `https://rent-a-jedi.herokuapp.com/api/v1/aliens/`,
-      method: 'GET',
-      success(res) {
-        const alien = res.data;
-        page.setData({
-          alien: alien
-        });
-        wx.hideToast();
-      }
-    })
   },
 
   /**
@@ -76,24 +65,9 @@ Page({
         page.setData({
           bookings: bookings
         });
-        console.log(page.data.forEach(function (booking) {
-           console.log(booking, 'each booking in the array')
-        }))
         wx.hideToast();
       }
     });
-    
-    wx.request({
-      url: `https://rent-a-jedi.herokuapp.com/api/v1/bookings/`,
-      method: 'GET',
-      success(res) {
-        // const alien = res.data;
-        // page.setData({
-        //   alien: alien
-        // });
-        wx.hideToast();
-      }
-    })
   },
 
   /**
@@ -129,5 +103,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  goToShow: function (event) {
+    let id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`
+    })
   }
 })
