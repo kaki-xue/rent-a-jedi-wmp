@@ -13,15 +13,23 @@ view {
   margin-left: 60rpx;
 }
 
+#end-date {
+  margin-top: 5px;
+}
+
+#start-date {
+  margin-top: 5px;
+
+}
+
 .dates-container {
-  display:flex;
+  display: flex;
   border-bottom: 3px groove rgba(152,144,144,0.21);
   height: 100px;
   align-items: center;
   margin-bottom: 15px;
   justify-content: space-between;
-  margin-left: 40rpx;
-
+  margin-left: 40px;
 }
 
 .alien-name {

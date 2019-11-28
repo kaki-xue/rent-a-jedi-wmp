@@ -6,19 +6,23 @@
         <view class="alien-name">{{alien.name}}</view>
           <view class="dates-container">
             <view class="start-date-container">
-              <view class="bold-text">Start Date:</view>
-              <input name="start" placeholder="Type here"/>
+              <view class="bold-text">Start Date:</view> 
+              <picker mode="date" value="{{date}}" start="2019-09-01" end="2020-12-31"  bindchange="bindStartDateChange" input name="start" placeholder="Press here">
+                <view id="startDate">{{startDate}}</view> 
+              </picker>
             </view>
             <view class="end-date-container">
               <view class="bold-text">End Date:</view> 
-              <input name="end" placeholder="Type here"/>
+              <picker mode="date" name="end" value="{{date}}" start="2019-09-01" end="2020-12-31" bindchange="bindEndDateChange" placeholder="Press here">
+                <view id="endDate">{{endDate}}</view> 
+              </picker>
             </view>
           </view>
-        </view>
-      <view class="booking-total-container">
-        <view>Total: ${{alien.price_per_day}}</view>
+          <view class="booking-total-container">
+          <view>Total: ${{alien.price_per_day}}</view>
         <button form-type="submit" class="pay-button">Pay</button>
       </view>  
+     </view> 
     </form> 
   </view>
 </view>

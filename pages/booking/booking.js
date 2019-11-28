@@ -1,14 +1,62 @@
 // pages/booking/booking.js
 const app = getApp()
 
+const date = new Date()
+const years = []
+const months = []
+const days = []
+
+for(let i = 1990; i <= date.getFullYear(); i++) {
+  years.push(i)
+}
+
+for (let i = 1; i <= 12; i++) {
+  months.push(i)
+}
+
+for (let i = 1; i <= 31; i++) {
+  days.push(i)
+}
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    years: years,
+    year: date.getFullYear(),
+    months: months,
+    month: 2,
+    days: days,
+    day: 2,
+    value: [9999, 11, 11],
+    startDate: 'Press here',
+    endDate: 'Press here'
   },
+
+  bindChange: function (e) {
+    const val = e.detail.value
+    this.setData({
+      year: this.data.years[val[0]],
+      month: this.data.months[val[1]],
+      day: this.data.days[val[2]]
+    })
+  },
+
+  bindStartDateChange: function (e) {
+    this.setData({
+      startDate: e.detail.value
+    })
+  },
+
+
+  bindEndDateChange: function (e) {
+    this.setData({
+      endDate: e.detail.value
+    })
+  },
+
 
   /**
    * Lifecycle function--Called when page load
@@ -23,7 +71,6 @@ Page({
         page.setData({
           alien: alien
         });
-        console.log(page.data)
         wx.hideToast();
       }
     });
@@ -80,11 +127,10 @@ Page({
 
   formSubmit: function (e) {
     let page = this;
-    const endDate = e.detail.value.end
-    const startDate = e.detail.value.start
+    const endDate = page.data.endDate
+    const startDate = page.data.startDate
     const alienId = page.data.alien.id
     const userId = app.globalData.userId
-    console.log(userId)
     
     const booking = {
       user_id : userId,
@@ -92,8 +138,6 @@ Page({
       start_date : startDate,
       end_date : endDate
     } 
-
-    console.log('booking before post request',booking)
 
     wx.showModal({
       title: 'The Force Is With You!',
@@ -106,7 +150,6 @@ Page({
           method: 'POST',
           data: booking,
           success(result){
-            console.log('result of post', result)
             wx.switchTab({
               url: `/pages/user/booking?id=${userId}`,
             })  
