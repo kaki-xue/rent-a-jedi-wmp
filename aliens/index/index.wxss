@@ -33,3 +33,16 @@
   background-position: center top;
 
 }
+.btn-black {
+  margin-top:25rpx;
+  width: 50%;
+  height: 60rpx;
+font-size: 25rpx;
+background-color:black;
+color:white;
+margin-left: 25%;
+border-radius:6rpx;
+padding-left: 30rpx;
+padding-top: 20rpx;
+margin-bottom:5rpx;
+}

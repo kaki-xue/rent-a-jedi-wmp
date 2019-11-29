@@ -52,7 +52,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -91,8 +91,13 @@
 				},
 				{
 					"id": -1,
+
+					"name": "aliens/index/index",
+					"pathName": "aliens/index/index",
+
 					"name": "pages/booking/booking",
 					"pathName": "pages/booking/booking",
+
 					"scene": null
 				}
 			]

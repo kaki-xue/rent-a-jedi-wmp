@@ -12,5 +12,5 @@
           </view>
         </view>
       </view>
-      <button>add new alien in the family</button>
+      <view bindtap="goToAdd" class="btn-black">add new alien in the family</view>
     </view>

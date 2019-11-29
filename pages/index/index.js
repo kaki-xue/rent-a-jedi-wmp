@@ -11,7 +11,7 @@ Page({
     ],
     indicatorDots: false,
     autoplay: true,
-    interval: 5000,
+    interval: 3000,
     duration: 1000
   },
   changeIndicatorDots: function (e) {

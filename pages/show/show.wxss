@@ -46,7 +46,10 @@ view {
 }
 
 .alien-description {
-  font-size: 18px;
+  font-size: 25rpx;
+  margin-top: 10rpx;
+
+
 }
 
 .alien-image {
