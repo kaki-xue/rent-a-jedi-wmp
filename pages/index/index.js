@@ -5,9 +5,9 @@ const app = getApp()
 Page({
   data: {
     imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575011123963&di=9c2cc91af1b9b455558d0b1630c67882&imgtype=0&src=http%3A%2F%2Fcdn2.hbimg.cn%2Fstore%2Fmj_wm%2Fmeijus%2F0%2F7%2FD525A1C9B6B5FDB6C48988851A.jpg',
+      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2194772323,258680713&fm=26&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1565116267,39322172&fm=26&gp=0.jpg'
     ],
     indicatorDots: false,
     autoplay: true,
@@ -73,7 +73,7 @@ Page({
    });
   },
   gotoFav: function (event) {
-    console.log(event)
+    console.log("event",event)
     let id = event.currentTarget.dataset.id;
     wx.navigateTo({
       url: `/pages/show/show?id=${id}`
