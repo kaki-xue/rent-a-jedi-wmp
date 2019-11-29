@@ -36,15 +36,22 @@
   height:100vh;
 }
 .form-margin{
-margin: 40rpx;
+  margin: 40rpx;
 }
 
 .btn-black {
-  font-weight: lighter;
+  font-weight: bold;
   color:white;
   background-color:black;
   width: 30%;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 input {
-  font-size:0.5ch;
+  font-size: 1.3ch;
+  opacity: 0.8;
+}
+
+.section-title {
+  margin-bottom: 9px;
 }
