@@ -1,12 +1,14 @@
 // aliens/new/new.js
-const app = getApp();
+const app = getApp()
+const AV = require('../../utils/av-weapp-min.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    items: []
   },
   formSubmit: function (event) {
     let page = this;
@@ -15,8 +17,8 @@ Page({
     aliens.skill = event.detail.value.input_2
     aliens.description = event.detail.value.input_3
     aliens.price_per_day = event.detail.value.input_4
-    aliens.image = event.detail.value.input_5
-    console.log(aliens);
+    aliens.image = page.data.imageUrl
+
     wx.request({
       url: 'https://rent-a-jedi.herokuapp.com/api/v1/users/23/aliens',
       method: 'post',
@@ -30,26 +32,6 @@ Page({
       }
     })
 },
-  //     let newAlien = {};
-  //   newAlien.name = event.detail.value.name
-  //   newAlien.skill = event.detail.value.skill
-  //   newAlien.descripton = event.detail.value.description
-  //   newAlien.price_per_day = event.detail.value.price_per_day
-  //   newAlien.image = event.detail.value.image
-  //   wx.request({
-  //     url: `https://rent-a-jedi.herokuapp.com/api/v1/usersid?=${id}/aliens`,
-  //     method: 'post',
-  //     data: newAlien,
-  //     success: function (res) {
-  //       const id = res.data.id
-  //       console.log(id);
-  //       wx.reLaunch({
-  //         url: `/pages/index/index`,
-  //       })
-  //     }
-  //   })
-
-  // },
 
   /**
    * 生命周期函数--监听页面加载
@@ -107,5 +89,30 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  
+  takePhoto: function () {
+    let page = this
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        let tempFilePath = res.tempFilePaths[0];
+        new AV.File('file-name', {
+          blob: {
+            uri: tempFilePath,
+          },
+        }).save().then(
+          file => {
+          const imageUrl = file.url()
+            page.setData({
+              imageUrl: imageUrl
+            });
+            console.log('image URL', page.data.imageUrl)
+          }
+        ).catch(console.error);
+      }
+    });
   }
 })
