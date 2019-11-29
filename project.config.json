@@ -91,13 +91,15 @@
 				},
 				{
 					"id": -1,
-
-					"name": "aliens/index/index",
-					"pathName": "aliens/index/index",
-
 					"name": "pages/booking/booking",
 					"pathName": "pages/booking/booking",
-
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "aliens/index/index",
+					"pathName": "aliens/index/index",
 					"scene": null
 				}
 			]

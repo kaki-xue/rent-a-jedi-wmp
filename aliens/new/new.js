@@ -1,12 +1,14 @@
 // aliens/new/new.js
-const app = getApp();
+const app = getApp()
+const AV = require('../../utils/av-weapp-min.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    items: []
   },
   formSubmit: function (event) {
     let page = this;
@@ -15,9 +17,10 @@ Page({
     aliens.skill = event.detail.value.input_2
     aliens.description = event.detail.value.input_3
     aliens.price_per_day = event.detail.value.input_4
-    aliens.image = event.detail.value.input_5
+    aliens.image = page.data.imageUrl
+
     wx.request({
-      url: 'https://rent-a-jedi.herokuapp.com/api/v1/users/22/aliens',
+      url: 'https://rent-a-jedi.herokuapp.com/api/v1/users/23/aliens',
       method: 'post',
       data: aliens,
       success: function (res) {
@@ -106,5 +109,40 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  takePhoto: function () {
+    let page = this
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        let tempFilePath = res.tempFilePaths[0];
+        new AV.File('file-name', {
+          blob: {
+            uri: tempFilePath,
+          },
+        }).save().then(
+          file => {
+          const imageUrl = file.url()
+            page.setData({
+              imageUrl: imageUrl
+            });
+            console.log('image URL', page.data.imageUrl)
+          }
+        ).catch(console.error);
+      }
+    });
   }
+  // takePhoto: function () {
+  //   wx.chooseImage({
+  //     count: 1,
+  //     sizeType: ['original'],
+  //     sourceType: ['album', 'camera'],
+  //     success: function (res) {
+  //       var tempFilePaths = res.tempFilePaths
+  //       console.log(tempFilePaths)
+  //     }
+  //   })
+  // }
 })
