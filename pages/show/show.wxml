@@ -3,7 +3,7 @@
   <view class="card-alien">
     <view class="alien-details">
       <view class="alien-name">{{name}}</view>
-      <view class="alien-skills">Skill: {{skill}}</view>
+      <view class="alien-skills">Species: {{skill}}</view>
       <view class="alien-description">{{description}}</view>
       <view class="price-details">$ {{price_per_day}}</view>
     </view>
