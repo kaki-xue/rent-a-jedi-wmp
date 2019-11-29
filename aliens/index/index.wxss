@@ -22,6 +22,9 @@
  width:100%;
  border-bottom: .5rpx solid #e3e7f1;
  margin-top: 3px;
+ justify-content: space-between;
+ align-items: center;
+
 }
 
 .avatar { 
@@ -46,3 +49,15 @@ padding-left: 30rpx;
 padding-top: 20rpx;
 margin-bottom:5rpx;
 }
+
+.picture-size { 
+  width: 60rpx;
+  height: 50rpx;
+  border-radius:6rpx;
+  background-size:cover;
+  margin-right: 20rpx;
+}
+/* .flex-space-around{
+  margin-right: 220rpx;
+
+} */
