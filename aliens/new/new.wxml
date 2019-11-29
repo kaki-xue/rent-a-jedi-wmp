@@ -23,7 +23,7 @@
       </view>
       <view class="form-margin">
         <view class="section__title">Image</view>
-        <input name="input_5" placeholder="**Enter url" />
+        <button bindtap="takePhoto" name="input_5" placeholder="**Enter url" >Upload Image</button>
       </view>
     </view>
     
