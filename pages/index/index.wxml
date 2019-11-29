@@ -7,7 +7,7 @@
 <view class="container-pic">
     <view class="favorite-page"style="background-image:url(http://images6.fanpop.com/image/quiz/991000/991572_1365017325990_447_300.jpg);">
     <view class="white-bold">This month favorite</view>
-    <button class="btn-white" bindtap="gotoFav">Rent it now!</button>
+    <button class="btn-white" data-id="" bindtap="gotoFav">Rent it now!</button>
   </view>
 </view>
 

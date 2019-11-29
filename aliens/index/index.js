@@ -13,6 +13,24 @@ goToAdd: function(e){
     url: '/aliens/new/new'
   })
 },
+goToDelete: function(e) {
+  let page = this;
+    const data = e.currentTarget.dataset;
+    console.log("data here",data);
+    wx.request({
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/23/aliens/${data.id}`,
+      method: 'DELETE',
+      success() {
+            page.onLoad();
+            // const aliens = res.data.aliens;
+            // page.setData({
+            //   aliens: aliens
+            // });
+
+
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -45,7 +63,6 @@ goToAdd: function(e){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**

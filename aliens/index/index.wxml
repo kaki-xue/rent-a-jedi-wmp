@@ -4,12 +4,13 @@
   </view>
    <view class="card-container">
     <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
-      <view class="card" bindtap="goToShow" data-id="{{alien.id}}">
+      <view class="card" data-id="{{alien.id}}">
         <view class="avatar" style="background-image:url({{alien.image}});"></view>
-          <view class="flex-space-around">
-            <view>{{alien.name}}</view>
+            <view class="name">{{alien.name}}</view>
             <view class="price-grey">$ {{alien.price_per_day}}</view>
-          </view>
+            <view class="image-end">
+              <image bindtap="goToDelete" data-id="{{alien.id}}" class="picture-size" src="/img/delete.png"></image>
+            </view>
         </view>
       </view>
       <view bindtap="goToAdd" class="btn-black">add new alien in the family</view>
