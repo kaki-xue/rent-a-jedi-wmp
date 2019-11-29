@@ -82,7 +82,7 @@ Page({
     let page = this;
     wx.request({
      
-      url: "http://localhost:3000/api/v1/aliens",
+      url: "https://rent-a-jedi.herokuapp.com/api/v1/aliens",
       method: 'GET',
       success(res) {
         const aliens = res.data.aliens;

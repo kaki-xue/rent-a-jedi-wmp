@@ -46,7 +46,7 @@ Page({
 
 
 
-< image bindtap = "goToAdd" src = "/img/add.png" class= "btn-black" > add new alien in the family<
+
 
 
 

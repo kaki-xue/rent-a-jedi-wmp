@@ -20,7 +20,7 @@ Page({
     aliens.image = page.data.imageUrl
 
     wx.request({
-      url: 'https://rent-a-jedi.herokuapp.com/api/v1/users/29/aliens',
+      url: 'https://rent-a-jedi.herokuapp.com/api/v1/users/31/aliens',
       method: 'post',
       data: aliens,
       success: function (res) {
