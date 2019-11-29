@@ -37,21 +37,17 @@
 
 }
 .btn-black {
-  margin-top:25rpx;
-  width: 50%;
+  width: 60rpx;
   height: 60rpx;
-font-size: 25rpx;
-background-color:black;
-color:white;
-margin-left: 25%;
 border-radius:6rpx;
 padding-left: 30rpx;
 padding-top: 20rpx;
 margin-bottom:5rpx;
+margin-left: 320rpx;
 }
 
 .picture-size { 
-  width: 60rpx;
+  width: 50rpx;
   height: 50rpx;
   border-radius:6rpx;
   background-size:cover;

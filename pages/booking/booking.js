@@ -130,7 +130,7 @@ Page({
     const endDate = page.data.endDate
     const startDate = page.data.startDate
     const alienId = page.data.alien.id
-    const userId = app.globalData.userId
+    const userId = 31
     
     const booking = {
       user_id : userId,

@@ -12,6 +12,7 @@
               <image bindtap="goToDelete" data-id="{{alien.id}}" class="picture-size" src="/img/delete.png"></image>
             </view>
         </view>
-      </view>
-      <view bindtap="goToAdd" class="btn-black">Add an Alien</view>
+      </view>    
+<image bindtap="goToAdd" src="/img/add.png" class="btn-black">add new alien in the family</image>      
     </view>
+    

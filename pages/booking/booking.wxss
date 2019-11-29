@@ -69,6 +69,7 @@ view {
 
 .alien-image {
   border-radius: 6px;
-  margin-left: 40rpx;
-
+  margin-left: 119rpx;
+  width: 259px;
+  height: 339px;
 }

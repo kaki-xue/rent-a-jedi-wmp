@@ -17,7 +17,7 @@ Page({
     const userId = getApp().globalData.userId
 
     wx.request({
-      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/${userId}/bookings`,
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/31/bookings`,
       method: 'get',
       success(res) {
         const bookings = res.data.bookings;
@@ -51,7 +51,7 @@ Page({
     const userId = getApp().globalData.userId
     
     wx.request({
-      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/${userId}/bookings`,
+      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/31/bookings`,
       method: 'get',
       success(res) {
         const bookings = res.data.bookings;

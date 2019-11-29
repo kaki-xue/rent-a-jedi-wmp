@@ -24,7 +24,7 @@ goToDelete: function(e) {
       if (res.confirm) {
         console.log("data here", data);
         wx.request({
-          url: `https://rent-a-jedi.herokuapp.com/api/v1/users/29/aliens/${data.id}`,
+          url: `https://rent-a-jedi.herokuapp.com/api/v1/users/31/aliens/${data.id}`,
           method: 'DELETE',
 
           success() {
@@ -47,7 +47,7 @@ goToDelete: function(e) {
   onLoad: function(options) {
     let page = this;
       wx.request({
-        url: "https://rent-a-jedi.herokuapp.com/api/v1/users/29/aliens",
+        url: "https://rent-a-jedi.herokuapp.com/api/v1/users/31/aliens",
         method: 'GET',
         success(res) {
           const aliens = res.data.aliens;

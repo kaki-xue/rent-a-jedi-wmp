@@ -53,12 +53,12 @@ view {
 }
 
 .alien-image {
-  width: 348px;
+  width: 296px;
   height: 364px;
   margin: 0 auto;
-  border-radius: 3px;
-  object-fit:cover;
-  margin-left: 25rpx;
+  object-fit: cover;
+  margin-left: 15%;
+  border-radius: 5px;
 }
 
 .container {
