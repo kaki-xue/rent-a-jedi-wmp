@@ -42,12 +42,15 @@ Page({
 
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
 
-  },
+
+
+
+< image bindtap = "goToAdd" src = "/img/add.png" class= "btn-black" > add new alien in the family<
+
+
+
+
 
   /**
    * Lifecycle function--Called when page hide
