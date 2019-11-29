@@ -1,6 +1,6 @@
 <!--aliens/index/index.wxml-->
  <view class="banner" style=" background-image:url(https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
-  <view class="margin-top">My aliens</view>
+  <view class="margin-top">My Aliens</view>
   </view>
    <view class="card-container">
     <view wx:for="{{aliens}}" wx:for-index="index" wx:key wx:for-item="alien">
@@ -13,5 +13,5 @@
             </view>
         </view>
       </view>
-      <view bindtap="goToAdd" class="btn-black">add new alien in the family</view>
+      <view bindtap="goToAdd" class="btn-black">Add an Alien</view>
     </view>
