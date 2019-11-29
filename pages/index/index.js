@@ -47,17 +47,22 @@ Page({
    const query = e.detail.value.query;
    console.log(query);
    wx.request({
-     url:`https://rent-a-jedi.herokuapp.com/api/v1/aliens?query=${query}`,
+     url: `http://rent-a-jedi.herokuapp.com/api/v1/aliens?query=${query}`,
+     
      method:"get",
      success: function(res) {
+       console.log(res)
       page.setData ({
-        aliens: res.data.aliens
+        aliens: res.data.aliens,
+     
       })
+  
      }
    })
   },
-  
-  onLoad: function (options) {
+
+  onShow: function () {
+
     let page = this;
     wx.request({
       url: "https://rent-a-jedi.herokuapp.com/api/v1/aliens",
@@ -71,6 +76,23 @@ Page({
       wx.hideToast();
     }
    });
+  },
+  
+  onLoad: function (options) {
+    let page = this;
+    wx.request({
+     
+      url: "http://localhost:3000/api/v1/aliens",
+      method: 'GET',
+      success(res) {
+        const aliens = res.data.aliens;
+        page.setData({
+          aliens: aliens
+        });
+
+        wx.hideToast();
+      }
+    });
   },
   gotoFav: function (event) {
     console.log("event",event)
