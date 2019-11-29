@@ -90,14 +90,25 @@ width:150rpx;
 margin-top:15rpx;
 }
 
-
 .card {
+  display: flex;
+height: 180rpx;
+width: calc(100%-10px);
+border-bottom: .5rpx solid #E3E7F1;
+margin-top: 3px;
+margin: 10px;
+padding-bottom: 10px;
+
+
+}
+
+/* .card {
  display:flex;
  height:180rpx;
  width:100%;
  border-bottom: .5rpx solid #e3e7f1;
  margin-top: 3px;
-}
+} */
 
 .avatar { 
   width: 200rpx;

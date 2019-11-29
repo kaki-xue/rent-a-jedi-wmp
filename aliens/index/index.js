@@ -16,28 +16,38 @@ goToAdd: function(e){
 goToDelete: function(e) {
   let page = this;
     const data = e.currentTarget.dataset;
-    console.log("data here",data);
-    wx.request({
-      url: `https://rent-a-jedi.herokuapp.com/api/v1/users/23/aliens/${data.id}`,
-      method: 'DELETE',
-      success() {
+  wx.showModal({
+    title: '',
+    content: 'Are you sure?',
+    confirmColor: "#c72c41",
+    success(res) {
+      if (res.confirm) {
+        console.log("data here", data);
+        wx.request({
+          url: `https://rent-a-jedi.herokuapp.com/api/v1/users/29/aliens/${data.id}`,
+          method: 'DELETE',
+
+          success() {
+
             page.onLoad();
-            // const aliens = res.data.aliens;
-            // page.setData({
-            //   aliens: aliens
-            // });
-
-
+          }
+        });
+      } else if (res.cancel) {
+        wx.navigateTo({
+          url: '/aliens/index/index'
+        })
       }
-    });
-  },
+    }
+  })
+},
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
     let page = this;
       wx.request({
-        url: "https://rent-a-jedi.herokuapp.com/api/v1/users/23/aliens",
+        url: "https://rent-a-jedi.herokuapp.com/api/v1/users/29/aliens",
         method: 'GET',
         success(res) {
           const aliens = res.data.aliens;
